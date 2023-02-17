@@ -12,7 +12,16 @@ const SignInScreen = () => {
     //add functionality for log in button
     const onSignInPressed = () => {
         console.warn("Sign in")
-    }
+    };
+    const onForgotPasswordPressed = () =>{
+        console.warn("forgot password")
+    };
+    const onSignInGooglePressed = () => {
+        console.warn("Google Sign in")
+    };
+    const onSignUpPressed = () => {
+        console.warn("Sign up")
+    };
     return (
         <View style={styles.root}>
             <Image 
@@ -34,7 +43,27 @@ const SignInScreen = () => {
             secureTextEntry={true}
             />
 
-            <CustomButton text = "Log In" onPress = {onSignInPressed}/>
+            <CustomButton 
+                text = "Log In" 
+                onPress = {onSignInPressed} 
+                type = "normal"
+            />
+            <CustomButton
+                text = "Sign In with Google"
+                onPress = {onSignInGooglePressed}
+                bgColor = "FAE9EA"
+                fgColor = "DD4D44"
+            />
+            <CustomButton
+                text = "forgot password?" 
+                onPress = {onForgotPasswordPressed} 
+                type = "TERITIARY"
+            />
+            <CustomButton
+                text = "Create Account" 
+                onPress = {onSignUpPressed} 
+                type = "TERITIARY"
+            />
         </View>
     )
 }
